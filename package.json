@@ -4,6 +4,7 @@
   "description": "react",
   "main": "index.js",
   "scripts": {
+    "push": "git push",
     "dev": "webpack-dev-server --progress --colors --display-chunks --watch --config ./config/webpack/dev.js",
     "build": "webpack --progress --colors --display-chunks --config ./config/webpack/prod.js",
     "test:webpack": "node ./config/webpack/dev.js"
