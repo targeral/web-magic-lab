@@ -3,6 +3,7 @@ const webpack = require('webpack');
 const merge = require('webpack-merge');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
+const WebpackBar = require('webpackbar');
 const baseConfig = require('./base')('dev');
 const {ENTRY_PATH, OUTPUT_PATH, ROOT} = require('../paths');
 const TITLE = require('../title');
@@ -24,6 +25,7 @@ const performance = {
 };
 const devtool = false;
 const plugins = [
+    new WebpackBar(),
     new HtmlWebpackPlugin({
         title: TITLE,
         filename: 'index.html',
