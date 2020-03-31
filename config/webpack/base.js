@@ -69,6 +69,10 @@ module.exports = (env) => {
     const plugins = [
         new ForkTsCheckerWebpackPlugin({
             tsconfig: path.resolve(ROOT, './tsconfig.json')
+        }),
+        new MiniCssExtractPlugin({
+            filename: '[name].css',
+            chunkFilename: "[id].css"
         })
     ];
     const CONFIG = {
